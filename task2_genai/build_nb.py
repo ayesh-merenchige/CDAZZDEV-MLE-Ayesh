@@ -29,7 +29,7 @@ md("""## 2A.1 — Problem statement
 code("""# --- Setup -----------------------------------------------------------------
 try:
     import google.colab  # noqa: F401
-    get_ipython().run_line_magic("pip", "install -q groq rouge-score wandb peft accelerate bitsandbytes datasets transformers")
+    get_ipython().run_line_magic("pip", "install -q \"transformers==4.46.3\" \"peft==0.13.2\" \"datasets==3.1.0\" \"accelerate==1.1.1\" \"bitsandbytes==0.44.1\" wandb groq rouge-score")
 except Exception:
     pass
 import os, json, random, re, difflib, collections, numpy as np, pandas as pd
@@ -195,7 +195,7 @@ md("""## 2B.2 — Hyperparameter justification (every choice, no silent defaults
 | Target modules | all 7 linear projections (q/k/v/o/gate/up/down) | Adapting attention *and* MLP layers covers both parsing style (attention) and label semantics (MLP) |
 | Learning rate | 2e-4 | Conservative LoRA LR → steady val-loss decrease; 1e-3 diverges on small data, 5e-5 underfits in 4 epochs |
 | LR scheduler | cosine | Smooth decay to ~0 avoids a late-training loss jump; warmup ratio 0.03 stabilizes the first steps |
-| Warmup ratio | 0.03 (~6 steps) | Short: dataset is small and we don't want to 'burn' the first epoch |
+| Warmup steps | 6 (~3% of optimizer steps) | Short: dataset is small and we don't want to 'burn' the first epoch |
 | Epochs | 4 | Enough to see val-loss flatten; >6 would overfit 172 train rows |
 | Train batch size | 4 | T4 16GB constraint after 4-bit base + activations |
 | Grad accumulation | 4 | Effective batch 16 → lower-variance gradients without OOM |
@@ -223,7 +223,7 @@ args = TrainingArguments(
     output_dir="./qlora_legal", num_train_epochs=4,
     per_device_train_batch_size=4, per_device_eval_batch_size=4,
     gradient_accumulation_steps=4, learning_rate=2e-4, lr_scheduler_type="cosine",
-    warmup_ratio=0.03, weight_decay=0.0, optim="paged_adamw_8bit",
+    warmup_steps=6, weight_decay=0.0, optim="paged_adamw_8bit",
     eval_strategy="epoch", save_strategy="epoch", logging_steps=10,
     bf16=False, fp16=True, gradient_checkpointing=True,
     report_to=["wandb"], seed=SEED, load_best_model_at_end=False)
