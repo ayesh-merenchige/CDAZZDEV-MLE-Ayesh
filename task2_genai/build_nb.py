@@ -29,8 +29,7 @@ md("""## 2A.1 — Problem statement
 code("""# --- Setup -----------------------------------------------------------------
 try:
     import google.colab  # noqa: F401
-    get_ipython().run_line_magic("pip", "install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124")
-    get_ipython().run_line_magic("pip", "install -q \"transformers==4.46.3\" \"peft==0.13.2\" \"datasets==3.1.0\" \"accelerate==1.1.1\" \"bitsandbytes==0.44.1\" \"triton==3.1.0\" wandb groq rouge-score")
+    get_ipython().run_line_magic("pip", "install -q \"transformers==4.46.3\" \"peft==0.13.2\" \"datasets==3.1.0\" \"accelerate==1.1.1\" \"bitsandbytes==0.46.0\" wandb groq rouge-score")
 except Exception:
     pass
 import os, json, random, re, difflib, collections, numpy as np, pandas as pd
