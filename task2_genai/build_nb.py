@@ -27,6 +27,11 @@ md("""## 2A.1 — Problem statement
 * **Incorrect:** malformed/non-JSON output, missing fields, wrong enum values, a clause type not supported by the text (hallucination), or a summary that contradicts the clause.""")
 
 code("""# --- Setup -----------------------------------------------------------------
+try:
+    import google.colab  # noqa: F401
+    get_ipython().run_line_magic("pip", "install -q groq rouge-score wandb peft accelerate bitsandbytes datasets transformers")
+except Exception:
+    pass
 import os, json, random, re, difflib, collections, numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 
@@ -227,8 +232,7 @@ trainer = Trainer(model=model, args=args, train_dataset=tok_ds["train"],
                   eval_dataset=tok_ds["validation"], tokenizer=tok)
 trainer.train()
 print("eval losses by epoch:", [(round(m['epoch'],1), round(m['eval_loss'],4)) for m in trainer.state.log_history if 'eval_loss' in m])
-model.save_pretrained("./qlora_legal/adapter")
-      for m in trainer.state.log_history if 'eval_loss' in m])""")
+model.save_pretrained("./qlora_legal/adapter")""")
 
 code("""# If OOM occurs: reduce per_device_train_batch_size to 2, raise grad_accum to 8,
 # or drop max_length to 768 and re-run. Documented outcome here after the Colab run.""")
