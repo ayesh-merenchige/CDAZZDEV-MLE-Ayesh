@@ -32,7 +32,9 @@ try:
     get_ipython().run_line_magic("pip", "install -q \"transformers==4.46.3\" \"peft==0.13.2\" \"datasets==3.1.0\" \"accelerate==1.1.1\" \"bitsandbytes==0.46.0\" wandb groq rouge-score")
 except Exception:
     pass
-import os, json, random, re, difflib, collections, numpy as np, pandas as pd
+import os
+os.environ.setdefault("BNB_CUDA_VERSION", "12.8")  # T4/Colab torch is CUDA 13; bnb has no cuda130 build
+import json, random, re, difflib, collections, numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 
 try:  # Colab secrets
