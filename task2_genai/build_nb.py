@@ -50,6 +50,22 @@ md("""## 2A.2 — Teacher-model data generation (200–300 examples)
 
 The teacher prompt (full text) is below; examples were generated across 20 seed topics × 10 industries with temperature 0.9 and validated for schema compliance.""")
 
+code("""# --- Colab setup: fetch the repo's files if they are missing ------------------
+import os, subprocess, sys
+if not (os.path.exists("gen_data.py") and os.path.exists("raw_examples.jsonl")):
+    print("Task files not found — cloning the GitHub repo...")
+    subprocess.run(["git", "clone", "--depth", "1",
+                    "https://github.com/ayesh-merenchige/CDAZZDEV-MLE-Ayesh.git"], check=False)
+    d = "CDAZZDEV-MLE-Ayesh/task2_genai"
+    if os.path.isdir(d):
+        os.chdir(d); sys.path.insert(0, os.getcwd())
+print("cwd:", os.getcwd())
+print("files present:", [f for f in ["gen_data.py", "raw_examples.jsonl",
+      "train.jsonl", "val.jsonl", "test.jsonl"] if os.path.exists(f)])
+if not os.path.exists("raw_examples.jsonl") and os.path.exists("gen_data.py"):
+    print("Regenerating raw_examples.jsonl with the teacher (~5-10 min)...")
+    subprocess.run([sys.executable, "gen_data.py"], check=True)""")
+
 code("""import gen_data, inspect
 print(inspect.getsource(gen_data)[:0])  # (source kept in gen_data.py)
 print(gen_data.SYSTEM)  # the full teacher system prompt
