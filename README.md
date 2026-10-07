@@ -1,20 +1,10 @@
 # CDAZZDEV-MLE-Ayesh — Senior MLE Technical Assessment
 
-**Candidate:** Ayesh Merenchige
-**Date:** 2026-10-08
-**Video Walkthrough Link:** https://drive.google.com/file/d/1iu-O8Oy-DApyb2DuIkiHp4GLpZEcEKP5/view?usp=sharing
+- **Candidate:** Ayesh Merenchige
+- **Date:** 2026-10-08
+- **Video Walkthrough Link:** https://drive.google.com/file/d/1iu-O8Oy-DApyb2DuIkiHp4GLpZEcEKP5/view?usp=sharing
 
----
 
-## Overview
-
-This repository contains the completed CDAZZDEV Senior Machine Learning Engineer technical assessment, covering three independent tasks:
-
-| Task | Domain | Folder | Max Marks | Deliverables |
-|---|---|---|---|---|
-| **Task 1** | Financial AI | `task1_financial/` | 100 + 5 bonus | LLM-powered equity research pipeline with structured outputs |
-| **Task 2** | Generative AI | `task2_genai/` | 100 + 5 bonus | Domain-specific QLoRA fine-tuning with rigorous evaluation |
-| **Task 3** | Agentic Workflows | `task3_agentic/` | 100 + 5 bonus | Multi-agent financial research system with memory & observability |
 
 ---
 
