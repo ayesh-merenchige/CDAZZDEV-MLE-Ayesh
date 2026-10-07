@@ -33,7 +33,7 @@ try:
 except Exception:
     pass
 import os
-os.environ.setdefault("BNB_CUDA_VERSION", "12.8")  # T4/Colab torch is CUDA 13; bnb has no cuda130 build
+os.environ.setdefault("BNB_CUDA_VERSION", "128")  # Colab T4 torch is CUDA 13; bnb ships cuda128 binary
 import json, random, re, difflib, collections, numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 
