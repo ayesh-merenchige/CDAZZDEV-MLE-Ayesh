@@ -1,8 +1,8 @@
 # CDAZZDEV-MLE-Ayesh — Senior MLE Technical Assessment
 
 **Candidate:** Ayesh Merenchige
-**Date:** 2026-10-07
-**Repository:** https://github.com/ayesh-merenchige/CDAZZDEV-MLE-Ayesh-Merenchige
+**Date:** 2026-10-08
+**Video Walkthrough Link:** https://drive.google.com/file/d/1iu-O8Oy-DApyb2DuIkiHp4GLpZEcEKP5/view?usp=sharing
 
 ---
 
@@ -22,9 +22,9 @@ This repository contains the completed CDAZZDEV Senior Machine Learning Engineer
 
 | Resource | Link |
 |---|---|
-| **GitHub Repository** | https://github.com/ayesh-merenchige/CDAZZDEV-MLE-Ayesh-Merenchige |
+| **GitHub Repository** | https://github.com/ayesh-merenchige/CDAZZDEV-MLE-Ayesh |
 | **Hugging Face Model (Task 2)** | https://huggingface.co/AyeshM/qwen2.5-1.5b-legal-clause-qlora |
-| **Video Walkthrough** | [To be added — mandatory per email] |
+| **Video Walkthrough** | https://drive.google.com/file/d/1iu-O8Oy-DApyb2DuIkiHp4GLpZEcEKP5/view?usp=sharing |
 | **Agent Trace Log** | `task3_agentic/logs/agent_trace.jsonl` |
 
 ---
@@ -174,6 +174,20 @@ Each element of "examples" must be an object with exactly two keys:
       "summary" (1-2 sentence neutral summary of the clause)
 Vary industry tone and contract formality. Do not repeat clause openings.
 ```
+
+---
+
+## Pre-Submission Checklist
+
+- [x] GitHub repo is **public** and accessible
+- [x] All notebook cell outputs are **visible** (not cleared)
+- [x] **No API keys, tokens, or credentials** committed (verified in git history)
+- [x] Hugging Face model link is public: https://huggingface.co/AyeshM/qwen2.5-1.5b-legal-clause-qlora
+- [x] `CITATIONS.md` present and complete
+- [x] `REFLECTION.md` present and within 600 words (568 words)
+- [x] `agent_trace.jsonl` present in `task3_agentic/logs/`
+- [x] Video walkthrough recorded, narrated, link added
+- [x] All links verified in incognito window
 
 ---
 

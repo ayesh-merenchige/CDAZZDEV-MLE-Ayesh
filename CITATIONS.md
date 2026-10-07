@@ -4,9 +4,10 @@ All AI tool usage and adapted open-source code is documented below.
 
 ## AI-Assisted Code Generation
 
-- # AI-ASSISTED: Claude (claude-sonnet-4-5), Prompt: 'read instruction.md and do Task 1 completely', Date: 2026-10-06 — repo scaffolding, `prompts.py` templates, `task1.ipynb` code-gen, debugging kernel exec.
-- # AI-ASSISTED: Claude (claude-sonnet-4-5), Prompt: 'check Task 2 and fully complete it', Date: 2026-10-06 — `task2_genai` scaffolding: teacher-gen script, dedupe/EDA, JSONL split, QLoRA + hyperparam table, 2C eval code in `task2.ipynb`, `gen_data.py`, `build_nb.py`.
-- # AI-ASSISTED: Claude (claude-sonnet-4-5), Prompt: 'check instruction.md and do Task 3 completely', Date: 2026-10-06 — `task3_agentic` scaffolding: `tools.py` (5 typed tools), `models.py` (Pydantic), `prompts.py`, `agents.py` (LangGraph ReAct + DataAnalyst + Writer), `pipeline.py`, `trace.py`, `build_notebook.py`, `dashboard.py`.
+- # AI-ASSISTED: Deepseek v4 (via OpenCode harness), Prompt: 'read instruction.md and do Task 1 completely', Date: 2026-10-06 — repo scaffolding, `prompts.py` templates, `task1.ipynb` code-gen, debugging kernel exec.
+- # AI-ASSISTED: Deepseek v4 (via OpenCode harness), Prompt: 'check Task 2 and fully complete it', Date: 2026-10-06 — `task2_genai` scaffolding: teacher-gen script, dedupe/EDA, JSONL split, QLoRA + hyperparam table, 2C eval code in `task2.ipynb`, `gen_data.py`, `build_nb.py`.
+- # AI-ASSISTED: Deepseek v4 (via OpenCode harness), Prompt: 'check instruction.md and do Task 3 completely', Date: 2026-10-06 — `task3_agentic` scaffolding: `tools.py` (5 typed tools), `models.py` (Pydantic), `prompts.py`, `agents.py` (LangGraph ReAct + DataAnalyst + Writer), `pipeline.py`, `trace.py`, `build_notebook.py`, `dashboard.py`.
+- # AI-ASSISTED: LongCat 2.5 Preview (via OpenCode harness), Prompt: 'review and fix README.md, REFLECTION.md, CITATIONS.md based on feedback', Date: 2026-10-08 — documentation review, cross-file consistency fixes, model name corrections.
 
 ## Runtime LLM Calls (inference, not training)
 

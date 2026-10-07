@@ -1,16 +1,10 @@
 Video Walkthrough Link (MANDATORY per email)
 =============================================
 
-Status: NOT YET RECORDED
+Status: RECORDED
 
-Instructions:
-1. Record a screen walkthrough (max 5 minutes) narrated by you personally.
-2. Demonstrate the solution, key decisions, and code in your own words.
-3. Upload as unlisted YouTube or Google Drive link ('Anyone with link can view').
-4. Add the link below and verify it opens in an incognito window.
-
-Link: [TO BE ADDED AFTER RECORDING]
+Link: https://drive.google.com/file/d/1iu-O8Oy-DApyb2DuIkiHp4GLpZEcEKP5/view?usp=sharing
 
 Note: The PDF lists this as "Optional (+5 bonus)" but the invitation email states:
 "Submissions received without a video walkthrough will not be considered for further review."
-Treat this as MANDATORY.
+Treated as MANDATORY.
